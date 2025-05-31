@@ -1,0 +1,503 @@
+/* Patient Dashboard Specific Styles */
+
+/* Appointment Cards */
+.appointment-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary);
+    border-radius: var(--radius-md);
+    color: var(--text-light);
+    margin-right: var(--spacing-md);
+}
+
+.appointment-date .day {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
+}
+
+.appointment-date .month {
+    font-size: var(--font-size-xs);
+    text-transform: uppercase;
+}
+
+.upcoming-appointments .appointment-list {
+    padding: var(--spacing-md);
+}
+
+.upcoming-appointments .appointment-item {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.upcoming-appointments .appointment-item:last-child {
+    border-bottom: none;
+}
+
+.upcoming-appointments .appointment-info {
+    flex: 1;
+}
+
+.upcoming-appointments .appointment-info h4 {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+}
+
+.upcoming-appointments .appointment-info p {
+    margin: 4px 0;
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+}
+
+.upcoming-appointments .appointment-time {
+    font-size: var(--font-size-xs);
+    color: var(--primary);
+    display: inline-block;
+    padding: 2px 6px;
+    background-color: rgba(0, 119, 182, 0.1);
+    border-radius: var(--radius-sm);
+}
+
+.upcoming-appointments .appointment-actions {
+    margin-left: var(--spacing-md);
+}
+
+/* Prescription List */
+.latest-prescriptions .prescription-list {
+    padding: var(--spacing-md);
+}
+
+.prescription-item {
+    display: flex;
+    align-items: flex-start;
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.prescription-item:last-child {
+    border-bottom: none;
+}
+
+.prescription-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 90, 95, 0.1);
+    border-radius: var(--radius-circle);
+    margin-right: var(--spacing-md);
+}
+
+.prescription-icon i {
+    color: var(--accent);
+    width: 18px;
+    height: 18px;
+}
+
+.prescription-info {
+    flex: 1;
+}
+
+.prescription-info h4 {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+}
+
+.prescription-info p {
+    margin: 4px 0;
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+}
+
+.prescription-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--spacing-xs);
+}
+
+.prescription-meta span {
+    font-size: var(--font-size-xs);
+    color: var(--text-tertiary);
+}
+
+/* Profile Styles */
+/* Expand to almost full width */
+/* ─── Profile Card Container ─── */
+.profile-card {
+  width: calc(100% - 2rem);
+  margin: 1rem auto;
+  max-width: none;
+}
+
+/* ─── Header (banner+avatar) ─── */
+.profile-header {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #4a90e2, #357ab8);
+  color: #fff;
+}
+
+/* Avatar */
+.profile-header img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1.25rem;
+  border: 3px solid rgba(255,255,255,0.6);
+}
+
+/* Info inside header */
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.profile-info p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* ─── Body (attributes) ─── */
+.profile-attributes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  padding: 1.5rem;
+}
+
+.profile-attributes span {
+  display: block;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;           /* plenty of horizontal space */
+  font-size: 0.85rem;
+  color: #333;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+/* Prepend label inline */
+.profile-attributes span::before {
+  content: attr(data-label) ": ";
+  font-weight: bold;
+  color: #555;
+}
+
+
+/* ─── Responsive adjustment ─── */
+@media (max-width: 600px) {
+  .profile-card {
+    margin: var(--spacing-md);
+  }
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-header img {
+    margin-right: 0;
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.info-item {
+    margin-bottom: var(--spacing-md);
+}
+
+.info-label {
+    display: block;
+    font-size: var(--font-size-xs);
+    color: var(--text-tertiary);
+    margin-bottom: 4px;
+}
+
+.info-value {
+    font-size: var(--font-size-sm);
+}
+
+/* Medical History Section */
+.diagnoses-list,
+.treatments-list,
+.tests-list,
+.hospitalizations-list {
+    padding: var(--spacing-md);
+}
+
+.medical-record-item {
+    background-color: var(--surface);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--primary);
+}
+
+.medical-record-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-md);
+}
+
+.medical-record-title {
+    margin: 0;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
+}
+
+.medical-record-date {
+    font-size: var(--font-size-xs);
+    color: var(--text-tertiary);
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+}
+
+.medical-record-doctor {
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+.medical-record-content {
+    font-size: var(--font-size-sm);
+}
+
+.medical-record-section {
+    margin-top: var(--spacing-md);
+}
+
+.medical-record-section-title {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.medical-record-section-content {
+    background-color: var(--background);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+}
+
+/* Test Results */
+.test-result-item {
+    background-color: var(--surface);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--info);
+}
+
+.test-result-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-md);
+}
+
+.test-parameters {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.test-parameter {
+    background-color: var(--background);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+}
+
+.parameter-name {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.parameter-value {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
+}
+
+.parameter-range {
+    font-size: var(--font-size-xs);
+    color: var(--text-tertiary);
+    margin-top: 4px;
+}
+
+.parameter-normal .parameter-value {
+    color: var(--success);
+}
+
+.parameter-abnormal .parameter-value {
+    color: var(--error);
+}
+
+/* Hospitalization Records */
+.hospitalization-item {
+    background-color: var(--surface);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--warning);
+}
+
+.hospitalization-duration {
+    display: inline-block;
+    padding: 2px 8px;
+    background-color: rgba(255, 171, 0, 0.1);
+    color: var(--warning);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    margin-bottom: var(--spacing-md);
+}
+
+.doc-list {
+  margin-top: var(--spacing-sm);
+  font-size: var(--font-size-xs);
+}
+
+.doc-list a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.doc-list a:hover {
+  text-decoration: underline;
+}
+
+.medical-record-item {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.medical-record-header {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.field {
+  flex: 1;
+  margin-bottom: var(--spacing-md);
+}
+
+.field > strong {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.field > p,
+.field > span {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--text-primary);
+}
+
+.doc-list {
+  font-size: var(--font-size-xs);
+}
+
+.doc-list a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.doc-list a:hover {
+  text-decoration: underline;
+}
+.medical-record-item .field {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.medical-record-item .field > strong {
+  flex-shrink: 0;
+  color: var(--text-secondary);
+}
+
+.medical-record-item .field > span,
+.medical-record-item .field > p {
+  flex: 1;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.medical-record-header {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+/* Remove the white top bar on the Patient Dashboard */
+.main-header {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-bottom: none !important;
+}
+
+/* If you still see a thin line, also reset html/body margins */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide the search-bar entirely (if you deleted it but some padding remains) */
+.main-header .search-bar {
+  display: none !important;
+}
+/* Hide the request-appointment modal until we explicitly open it */
+#requestApptModal {
+  display: none;     /* don’t show it */
+  position: fixed;   /* cover the screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;       /* for flex centering */
+  justify-content: center;   /* for flex centering */
+  background: rgba(0,0,0,0.5); /* dim the background */
+  z-index: 1000;             /* sit on top */
+}
+.modal-content {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+}
